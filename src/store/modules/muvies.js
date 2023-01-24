@@ -33,6 +33,12 @@ const moviesStore = {
     }
   },
   actions: {
+    initMoviesStore: {
+      handler({ dispatch }) {
+        dispatch('fetchMovies')
+      },
+      root: true
+    },
     async fetchMovies({ getters, commit }) {
       try {
         const { currentPage, moviesPerPage, slicedIDs } = getters
