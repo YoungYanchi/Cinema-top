@@ -8,7 +8,7 @@ export default {
   props: {
     poster: {
       type: String,
-      default: ""
+      default: ''
     }
   },
   data: () => ({
@@ -48,16 +48,12 @@ export default {
 
 .poster-page-bg:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   opacity: 0.8;
-  background-image: linear-gradient(
-      45deg,
-      rgb(0, 3, 38) 0%,
-      rgb(82, 15, 117) 100%
-  );
+  background-image: linear-gradient(45deg, rgb(0, 3, 38) 0%, rgb(82, 15, 117) 100%);
 }
 </style>

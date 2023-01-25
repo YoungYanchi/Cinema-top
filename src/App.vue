@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <PosterBg :poster="posterBg"/>
-    <MoviesList :list="moviesList" @changePoster="onChangePoster"/>
+    <PosterBg :poster="posterBg" />
+    <MoviesList :list="moviesList" @changePoster="onChangePoster" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
     PosterBg
   },
   data: () => ({
-    posterBg: ""
+    posterBg: ''
   }),
   computed: {
     ...mapGetters('movies', ['moviesList'])

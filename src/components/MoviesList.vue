@@ -5,7 +5,7 @@
       <BRow>
         <template v-if="isExist">
           <BCol cols="3" v-for="(movie, key) in list" :key="key">
-            <MovieItem :movie="movie" @mouseover.native="onMouseOver(movie.Poster)"/>
+            <MovieItem :movie="movie" @mouseover.native="onMouseOver(movie.Poster)" />
           </BCol>
         </template>
         <template v-else>
