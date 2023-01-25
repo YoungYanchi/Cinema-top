@@ -1,5 +1,5 @@
 <template>
-  <div class="movie-item mb-3">
+  <div class="movie-item mb-3" >
     <div class="movie-item-poster" :style="posterBg"></div>
     <div class="movie-info-wrap">
       <div class="movie-item-info">
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "MovieItem",
+  name: 'MovieItem',
   props: {
     movie: {
       type: Object,
@@ -30,11 +30,11 @@ export default {
   computed: {
     posterBg() {
       return {
-        "background-image": `url(${this.movie.Poster})`
-      };
+        'background-image': `url(${this.movie.Poster})`
+      }
     }
   }
-};
+}
 </script>
 
 <style scoped>
