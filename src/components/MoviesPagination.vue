@@ -1,10 +1,11 @@
 <template>
   <div class="movies-pagination">
-    <BPagination v-model="currentPageModel"
-                 :per-page="perPage"
-                 :total-rows="total"
-                 prev-text="Prev"
-                 next-text="Next"/>
+    <BPagination
+        v-model="currentPageModel"
+        :per-page="perPage"
+        :total-rows="total"
+        prev-text="Prev"
+        next-text="Next" />
   </div>
 </template>
 
@@ -31,7 +32,6 @@ export default {
         return this.currentPage
       },
       set(value) {
-        console.log(value)
         this.$emit('pageChanged', value)
       }
     }
