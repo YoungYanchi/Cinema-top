@@ -1,6 +1,10 @@
 <template>
   <div class="movies-pagination">
-    <BPagination v-model="currentPageModel" :per-page="PerPage" :total-rows="total" prev-text="Prev" next-text="Next" />
+    <BPagination v-model="currentPageModel"
+                 :per-page="perPage"
+                 :total-rows="total"
+                 prev-text="Prev"
+                 next-text="Next"/>
   </div>
 </template>
 
