@@ -8,10 +8,14 @@
       </div>
       <div class="movie-item-controls row no-gutters">
         <div class="col pr-2">
-          <BButton style="width: 100%" variant="outline-light">Edit</BButton>
+          <BButton style="width: 100%"
+                   variant="outline-light"
+                   @click="showInfoModalEvent">О фильме</BButton>
         </div>
         <div class="col pl-2">
-          <BButton style="width: 100%" variant="outline-light" @click="emitRemoveEvent">Remove</BButton>
+          <BButton style="width: 100%"
+                   variant="outline-light"
+                   @click="emitRemoveEvent">Удалить</BButton>
         </div>
       </div>
     </div>
@@ -40,6 +44,10 @@ export default {
         id: this.movie.imdbID,
         title: this.movie.Title
       })
+    },
+    showInfoModalEvent() {
+      this.$emit('showModal', this.movie.imdbID)
+
     }
   }
 }

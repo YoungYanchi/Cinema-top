@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <PreLoader />
+    <NotificationMessage/>
     <PosterBg :poster="posterBg" />
+    <HeaderPage/>
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
     <MoviesPagination
       :current-page="currentPage"
@@ -18,6 +20,8 @@ import MoviesList from '@/components/MoviesList'
 import PosterBg from '@/components/PosterBg'
 import MoviesPagination from '@/components/MoviesPagination'
 import PreLoader from '@/components/PreLoader'
+import HeaderPage from "@/components/HeaderPage";
+import NotificationMessage from "@/components/NotificationMessage";
 
 export default {
   name: 'App',
@@ -25,7 +29,9 @@ export default {
     MoviesList,
     PosterBg,
     MoviesPagination,
-    PreLoader
+    PreLoader,
+    HeaderPage,
+    NotificationMessage
   },
   data: () => ({
     posterBg: ''
@@ -60,5 +66,9 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 </style>

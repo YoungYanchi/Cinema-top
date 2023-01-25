@@ -13,12 +13,11 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name:  'root',
+      name: 'root',
       component: App
     }
   ]
 })
-
 
 new Vue({
   router,
